@@ -1,18 +1,21 @@
-const express = require("express");
+const express = require("express"); 
 const bodyParser = require("body-parser");
 const app = express();
 
-// const placesRoutes = require("./routes/places-routes");
-app.use(bodyParser.json())
-// app.use("/api/components", placesRoutes);
+app.use(bodyParser.json());
+
+app.get("/test", (req, res) => {
+  res.json({ message: "Запрос GET выполнен успешно." });
+});
 
 app.use((error, req, res, next) => {
   if (res.headerSent) {
     return next(error);
   }
   res.status(error.code || 500);
-  res.json({ message: error.message || "An unknown error occurred!" });
+  res.json({ message: error.message || "Произошла ошибка" });
 });
 
-app.listen(5050);
-//MVC
+app.listen(5050, () => {
+  console.log("Server is running on port 5050");
+});
