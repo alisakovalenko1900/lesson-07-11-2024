@@ -4,7 +4,7 @@ const app = express();
 
 // const placesRoutes = require("./routes/places-routes");
 app.use(bodyParser.json())
-app.use("/api/components", placesRoutes);
+// app.use("/api/components", placesRoutes);
 
 app.use((error, req, res, next) => {
   if (res.headerSent) {
