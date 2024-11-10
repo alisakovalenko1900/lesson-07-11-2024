@@ -1,0 +1,24 @@
+{
+    "env": {
+      "node": true,
+      "es2021": true
+    },
+    "extends": [
+      "eslint:recommended",
+      "plugin:node/recommended",
+      "plugin:prettier/recommended"
+    ],
+    "parserOptions": {
+      "ecmaVersion": 12,
+      "sourceType": "module"
+    },
+    "rules": {
+      "no-console": "off", // Allow console statements, useful for server-side logging
+      "no-unused-vars": ["warn", { "argsIgnorePattern": "^_" }], // Warn for unused vars, ignore args starting with "_"
+      "consistent-return": "error", // Enforce consistent return statements
+      "eqeqeq": ["error", "always"], // Require strict equality (=== and !==)
+      "no-var": "error", // Disallow var, use let/const instead
+      "prefer-const": "error", // Prefer const when variables are not reassigned
+      "prettier/prettier": ["error", { "singleQuote": true, "semi": false }] // Enforce Prettier formatting,
+    }
+  }

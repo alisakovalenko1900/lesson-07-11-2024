@@ -1,0 +1,8 @@
+{
+	"user": "database_07_11_user",
+	"host": "dpg-csmggadumphs73ahfbs0-a.oregon-postgres.render.com",
+	"database": "database_07_11",
+	"password": "foq6GujAa5Kh9OGwgEeb0xX7rJcZaDfO",
+	"port": 5432,
+	"ssl": true
+}
