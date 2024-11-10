@@ -1,8 +1,14 @@
 const express = require('express');
+const cors = require('cors');
 const bodyParser = require('body-parser');
 const routes = require('./routes');
 
 const app = express();
+
+app.use(cors({
+origin: 'http://localhost:5173',
+  }));
+
 app.use(bodyParser.json());
 
 app.use((error, req, res, next) => {
